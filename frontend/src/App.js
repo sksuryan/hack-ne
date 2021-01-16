@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Nav } from "./Components/Nav";
+
+import HeroSection from "./Components/HeroSection";
+import Nav from "./Components/Nav";
 
 const Container = styled.div`
   width: 90vw;
@@ -12,6 +14,7 @@ function App() {
   return (
     <Container>
       <Nav />
+      <HeroSection />
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import { Container, Logo } from "./styles";
 
-export const Nav = () => {
+const Nav = () => {
   return (
     <Container>
       <Logo>
@@ -10,3 +10,5 @@ export const Nav = () => {
     </Container>
   );
 };
+
+export default Nav;
