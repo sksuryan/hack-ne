@@ -1,6 +1,12 @@
 import React from "react";
 
-import { Container, GetStarted, Text } from "./styles";
+import {
+  Container,
+  GetStarted,
+  HeroContainer,
+  OptionCard,
+  Text,
+} from "./styles";
 
 class HeroSection extends React.Component {
   constructor(props) {
@@ -11,6 +17,7 @@ class HeroSection extends React.Component {
     this.state = {
       textDisplayed: "",
       showButton: false,
+      showOptions: false,
     };
 
     this.interval = null;
@@ -30,6 +37,10 @@ class HeroSection extends React.Component {
     }
   };
 
+  onGetStarted = () => {
+    this.setState({ showButton: false, showOptions: true });
+  };
+
   componentDidMount() {
     this.interval = setInterval(this.updateBannerText, 200);
   }
@@ -37,11 +48,19 @@ class HeroSection extends React.Component {
   render() {
     return (
       <Container>
-        <Text>
-          {this.state.textDisplayed}
-          <span className="cursor">|</span>
-        </Text>
-        <GetStarted showButton={this.state.showButton}>Get Started</GetStarted>
+        <HeroContainer>
+          <Text showOptions={this.state.showOptions}>
+            {this.state.textDisplayed}
+            <span className="cursor">|</span>
+          </Text>
+          <GetStarted
+            showButton={this.state.showButton}
+            onClick={this.onGetStarted}
+          >
+            Get Started
+          </GetStarted>
+        </HeroContainer>
+        <OptionCard showOptions={this.state.showOptions}></OptionCard>
       </Container>
     );
   }
