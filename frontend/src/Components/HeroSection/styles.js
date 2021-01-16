@@ -9,10 +9,21 @@ const CursorAnimation = keyframes`
 `;
 
 export const Container = styled.div`
+  min-height: 100vh;
+
   display: flex;
   flex-direction: column;
 
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HeroContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  min-height: 30vh;
+  width: 100%;
 
   align-items: center;
   justify-content: center;
@@ -29,6 +40,8 @@ export const Text = styled.div`
   user-select: none;
 
   transition: all 0.4s ease-in-out;
+
+  margin-bottom: ${(props) => (props.showOptions ? "-96px" : 0)};
 
   & .cursor {
     display: inline-block;
@@ -82,6 +95,14 @@ export const GetStarted = styled.button`
   }
 `;
 
-export const OptionContainer = styled.div`
-  height: 60vh;
+export const OptionCard = styled.div`
+  height: ${(props) => (props.showOptions ? "70vh" : 0)};
+  width: 100%;
+
+  background: black;
+
+  transition: all ease 1s;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 `;
