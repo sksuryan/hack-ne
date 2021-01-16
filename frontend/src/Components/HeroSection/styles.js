@@ -22,7 +22,7 @@ export const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  min-height: 30vh;
+  height: 30vh;
   width: 100%;
 
   align-items: center;
@@ -97,12 +97,88 @@ export const GetStarted = styled.button`
 
 export const OptionCard = styled.div`
   height: ${(props) => (props.showOptions ? "70vh" : 0)};
+  visibility: ${(props) => (props.showOptions ? "initial" : "collapse")};
   width: 100%;
 
-  background: black;
+  margin: 0 auto;
 
-  transition: all ease 1s;
+  display: flex;
+  justify-content: space-evenly;
 
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  transition: all ease 0.4s;
+
+  @media (max-width: 550px) {
+    display: grid;
+  }
+`;
+
+export const Option = styled.div`
+  display: ${(props) => (props.showOptions ? "flex" : "none")};
+  flex-direction: column;
+
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 2.5rem;
+
+  transition: all ease 0.4s;
+
+  & h1 {
+    font-size: 1.75rem;
+  }
+
+  & p {
+    font-size: 1.25rem;
+    font-weight: 400;
+
+    text-align: justify;
+
+    margin: 1rem;
+  }
+
+  & a {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    background: none;
+    border-radius: 4px;
+
+    border: 2px solid black;
+    color: #000;
+
+    padding: 8px;
+
+    transition: all ease-in-out 0.4s;
+  }
+
+  & a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 1rem;
+  }
+
+  @media (max-width: 550px) {
+    padding: ${(props) => (props.showOptions ? "1rem 0" : 0)};
+
+    & h1 {
+      font-size: 1.5rem;
+    }
+
+    & p {
+      font-size: 1rem;
+
+      margin: 1rem 0;
+    }
+
+    & a {
+      font-size: 1rem;
+    }
+  }
 `;
