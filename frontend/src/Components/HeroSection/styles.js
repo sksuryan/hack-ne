@@ -16,6 +16,8 @@ export const Container = styled.div`
 
   align-items: center;
   justify-content: center;
+
+  color: #000;
 `;
 
 export const HeroContainer = styled.div`

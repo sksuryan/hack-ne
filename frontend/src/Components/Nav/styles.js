@@ -18,8 +18,10 @@ export const Logo = styled.h1`
   flex-direction: column;
   text-transform: uppercase;
 
+  font-family: var(--primary-font);
   font-size: 1.25rem;
   font-weight: 900;
+  color: #000;
 
   user-select: none;
 

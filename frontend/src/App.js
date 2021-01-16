@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HeroSection from "./Components/HeroSection";
 import Nav from "./Components/Nav";
+import Recruiter from "./Components/Recruiter";
 
 const Container = styled.div`
   width: 90vw;
@@ -23,6 +24,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <HeroSection />
+          </Route>
+          <Route path="/recruiter">
+            <Recruiter />
           </Route>
         </Switch>
       </Container>

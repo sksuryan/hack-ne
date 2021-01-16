@@ -74,7 +74,7 @@ class HeroSection extends React.Component {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum
             </p>
-            <Link to="/something">Continue</Link>
+            <Link to="/recruiter">Continue</Link>
           </Option>
           <Option showOptions={this.state.showOptions}>
             <h1>Feature 2</h1>
