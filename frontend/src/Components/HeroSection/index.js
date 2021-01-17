@@ -43,26 +43,18 @@ class HeroSection extends React.Component {
           <Option showOptions={this.props.showOptions}>
             <h1>Feature 1</h1>
             <p>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
+              Enable unbiased screening of resume by hiding sensitive information like name gender, 
+              email which describe ethnicity, religion or gender of a person until the shortlisting 
+              so that everybody gets equal chance based entirely on skills.
             </p>
             <Link to="/recruiter">Continue</Link>
           </Option>
           <Option showOptions={this.props.showOptions}>
             <h1>Feature 2</h1>
             <p>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
+              To give an inclusive idea about the organization's opportunities we help check job
+              descriptions and advertisements for dominating gender specific words and review along with
+              suggesting user appropriate replacements.
             </p>
             <Link to="/something">Continue</Link>
           </Option>
