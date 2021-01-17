@@ -4,6 +4,8 @@ from flask.helpers import send_file, send_from_directory
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
+from pdfcheck import modify
+
 app = Flask("__main__")
 CORS(app)
 
@@ -33,9 +35,8 @@ def upload_file():
 	if file and allowed_file(file.filename):
 		filename = secure_filename(file.filename)
 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-		print(os.getcwd())
-		print(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER']))
-		return send_from_directory(os.path.join(os.getcwd(),app.config['UPLOAD_FOLDER']),filename=filename)
+		modify(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+		return send_from_directory(os.path.join(os.getcwd()),'results.txt')
 	else:
 		resp = jsonify({'message' : 'Allowed file types are pdf'})
 		return resp, 400
