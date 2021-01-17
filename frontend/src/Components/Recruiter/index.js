@@ -17,7 +17,7 @@ class Recruiter extends React.Component {
   };
 
   onSubmit = () => {
-    const reqURL = "";
+    const reqURL = "http://localhost:5000/recruiter/api";
     if (this.state.resume) {
       const formData = new FormData();
       formData.append("file", this.state.resume);
@@ -28,10 +28,17 @@ class Recruiter extends React.Component {
       };
 
       fetch(reqURL, options)
-        .then((data) => data.json())
+        .then((data) => data.blob())
         .then((data) => {
-          console.log(data);
-          this.setState({ submitButtonClass: "" });
+          let url = window.URL.createObjectURL(data);
+          let a = document.createElement("a");
+          a.href = url;
+          a.download = "results.txt";
+          a.click();
+          this.setState({
+            submitButtonClass: "",
+            errorMsg: "Please select your resume!",
+          });
         })
         .catch((err) => {
           console.log(err);
