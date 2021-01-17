@@ -9,6 +9,11 @@ export const Container = styled.div`
 
   align-items: center;
   justify-content: center;
+
+  & p {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 export const SubmitButton = styled.button`
