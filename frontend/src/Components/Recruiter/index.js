@@ -17,7 +17,7 @@ class Recruiter extends React.Component {
   };
 
   onSubmit = () => {
-    const reqURL = "http://localhost:5000/recruiter/api";
+    const reqURL = "https://testsback.herokuapp.com/recruiter/api";
     if (this.state.resume) {
       const formData = new FormData();
       formData.append("file", this.state.resume);
