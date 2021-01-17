@@ -3,7 +3,7 @@ import spacy
 import resume_parser
 
 
-nlp_model = spacy.load('model/nlp_ner_model')
+nlp_model = spacy.load('nlp_ner_model')
 
 
 def modify(filepath):
